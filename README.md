@@ -44,6 +44,10 @@
 4. Click the **Send** button to interact with the frontmost application.
 5. View the response in the chat interface.
 
+Note: You should add OpenAI API key to environment variables.
+<img width="945" alt="Screenshot 2024-11-18 at 2 43 48 PM" src="https://github.com/user-attachments/assets/ab34b050-2401-4ce1-be4c-3452470d95fa">
+
+
 ---
 
 ## Code Overview
