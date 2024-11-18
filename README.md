@@ -75,6 +75,10 @@ This app requires and asks automatically macOS Accessibility permissions to func
 2. Click the lock to make changes and authenticate.
 3. Add **Echo** to the list of allowed applications.
 
+## Demo Video
+
+[![Youtube Demo Video](https://img.youtube.com/vi/RmiFfuKhAJQ/0.jpg)](https://www.youtube.com/watch?v=RmiFfuKhAJQ)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
