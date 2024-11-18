@@ -10,14 +10,10 @@
 - **User Prompts**: Send prompts to interact with text area of the detected application.
 - **Chat View Interface**: Displays interactions in a chat-like interface powered by SwiftUI.
 
----
-
 ## Requirements
 
 - macOS 14.0 or later
 - Xcode 15.0 or later
-
----
 
 ## Installation
 
@@ -36,8 +32,6 @@
    - Select your target device (Mac).
    - Press **Cmd + R** or click the Run button in Xcode.
 
----
-
 ## Usage
 
 1. Launch **Echo** on macOS.
@@ -48,9 +42,6 @@
 
 Note: You should add OpenAI API key to environment variables.
 <img width="945" alt="Screenshot 2024-11-18 at 2 43 48 PM" src="https://github.com/user-attachments/assets/ab34b050-2401-4ce1-be4c-3452470d95fa">
-
-
----
 
 ## Code Overview
 
@@ -76,8 +67,6 @@ Note: You should add OpenAI API key to environment variables.
 - **Chat Interface**:
   - Built using `SwiftUI` and embedded into `NSViewController` via `NSHostingController`.
 
----
-
 ## Accessibility Permissions
 
 This app requires and asks automatically macOS Accessibility permissions to function correctly. Follow these steps to grant permissions:
@@ -85,8 +74,6 @@ This app requires and asks automatically macOS Accessibility permissions to func
 1. Open **System Preferences** > **Privacy & Security** > **Accessibility**.
 2. Click the lock to make changes and authenticate.
 3. Add **Echo** to the list of allowed applications.
-
----
 
 ## License
 
