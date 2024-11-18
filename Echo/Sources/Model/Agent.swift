@@ -14,7 +14,7 @@ final class Agent {
         case emptyResult
     }
     
-    private let openAI = OpenAI(apiToken: "")
+    private let openAI = OpenAI(apiToken: "<ADD YOUR TOKEN HERE>")
     private let systemMessage = "You are an assistant that performs text and code operations. Return only the result, without any additional explanations. Do not add language identifiers."
     
     func query(inputString: String, prompt: String, reply: @escaping ((Result<String, Error>) -> Void)) {

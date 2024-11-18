@@ -58,3 +58,8 @@ struct MessageView: View {
         }
     }
 }
+
+#Preview {
+    MessageView(message: .userPrompt("Convert to Objective-C"))
+        .padding(20)
+}

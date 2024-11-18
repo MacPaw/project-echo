@@ -23,3 +23,7 @@ struct ChatView: View {
         }.padding(0)
     }
 }
+
+#Preview {
+    ChatView(store: MessagesStore.buildForPreview())
+}
