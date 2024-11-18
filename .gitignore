@@ -13,6 +13,8 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+xcuserdata/
+
 .DS_Store
 
 ## Playgrounds
