@@ -103,4 +103,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Author
 
-Created by **MacPaw Technological R&D** on 11/17/2024.
+Created by [MacPaw Technological R&D](https://research.macpaw.com)
