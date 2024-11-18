@@ -2,13 +2,16 @@
 
 <img width="1800" alt="Screenshot 2024-11-18 at 2 58 45 PM" src="https://github.com/user-attachments/assets/b7d2a457-d4c6-430b-8fae-c3364ea4c7af">
 
-**Echo** is a macOS application that demonstrates how to interact with macOS applications using Accessibility and OpenAI APIs. It allows users to send prompts to the frontmost application and receive responses, showcasing a functional chat-like interface.
+**Echo** is a macOS application that demonstrates how to interact with macOS applications using Accessibility and [OpenAI](https://openai.com) APIs. It allows users to send prompts to the frontmost application and receive responses, showcasing a functional chat-like interface.
 
 ## Features
 
 - **Real-Time Frontmost Application Detection**: Automatically detects the currently active macOS application.
 - **User Prompts**: Send prompts to interact with text area of the detected application.
-- **Chat View Interface**: Displays interactions in a chat-like interface powered by SwiftUI.
+- **Chat View Interface**: Displays interactions in a chat-like interface
+
+> [!WARNING]  
+> Project Echo is an experimental prototype that demonstrates an approach, use in on your own risk
 
 ## Requirements
 
