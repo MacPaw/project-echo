@@ -1,8 +1,10 @@
 # Echo
 
-<img width="1800" alt="Screenshot 2024-11-18 at 2 58 45 PM" src="https://github.com/user-attachments/assets/b7d2a457-d4c6-430b-8fae-c3364ea4c7af">
+![EchoIcon-256](https://github.com/user-attachments/assets/5ce1e09e-8413-48cb-a626-99b45dd18717)
 
 **Echo** is a macOS application that demonstrates how to interact with macOS applications using Accessibility and [OpenAI](https://openai.com) APIs. It allows users to send prompts to the frontmost application and receive responses, showcasing a functional chat-like interface.
+
+<img width="1800" alt="Screenshot 2024-11-18 at 2 58 45 PM" src="https://github.com/user-attachments/assets/b7d2a457-d4c6-430b-8fae-c3364ea4c7af">
 
 ## Features
 
