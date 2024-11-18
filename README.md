@@ -80,6 +80,17 @@ This app requires and asks automatically macOS Accessibility permissions to func
 2. Click the lock to make changes and authenticate.
 3. Add **Echo** to the list of allowed applications.
 
+## Example Screenshots
+
+### Xcode
+![xcode](https://github.com/user-attachments/assets/79fc4d19-fb7a-47d5-b0fd-885f720471ad)
+
+### Safari
+![safari](https://github.com/user-attachments/assets/34cc2da5-f30c-4087-ad2f-4fb97b4f2af2)
+
+### TextMate
+![textmate](https://github.com/user-attachments/assets/76270d69-1104-42ff-8b4b-4aeb2a17de3c)
+
 ## Demo Video
 
 [![Youtube Demo Video](https://img.youtube.com/vi/RmiFfuKhAJQ/0.jpg)](https://www.youtube.com/watch?v=RmiFfuKhAJQ)
