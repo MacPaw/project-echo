@@ -12,7 +12,7 @@
 
 ## Requirements
 
-- macOS 13.0 or later
+- macOS 14.0 or later
 - Xcode 15.0 or later
 
 ---
