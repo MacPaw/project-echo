@@ -99,8 +99,6 @@ This app requires and asks automatically macOS Accessibility permissions to func
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
-
 ## Author
 
 Created by [MacPaw Research](https://research.macpaw.com)
