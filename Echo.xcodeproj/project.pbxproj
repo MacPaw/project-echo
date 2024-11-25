@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,11 +15,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A7C4A1EA2CEA8D0D0018AC94 /* Echo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Echo;
-			sourceTree = "<group>";
-		};
+		A7C4A1EA2CEA8D0D0018AC94 /* Echo */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Echo; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +88,7 @@
 				};
 			};
 			buildConfigurationList = A7C4A1E32CEA8D0D0018AC94 /* Build configuration list for PBXProject "Echo" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -103,7 +100,6 @@
 			packageReferences = (
 				A7CF72882CEAABC0001DE2BC /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
-			preferredProjectObjectVersion = 77;
 			productRefGroup = A7C4A1E92CEA8D0D0018AC94 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
