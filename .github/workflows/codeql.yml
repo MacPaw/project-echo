@@ -1,0 +1,52 @@
+name: "CodeQL Security Checks"
+
+on:
+  push:
+    branches: [ "develop", "main" ]
+  pull_request:
+    branches: [ "develop", "main" ]
+  schedule:
+    - cron: '31 7 * * 4'
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    permissions:
+      # required for all workflows
+      security-events: write
+
+    concurrency:
+      # Cancel any previously running CodeQL jobs for a PR when a new commit is pushed to the PR branch
+      group: ${{ github.workflow }}-${{ github.ref }}-${{ matrix.language }}
+      cancel-in-progress: true
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - language: swift
+          build-mode: manual
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Switch to Xcode 16.1
+      run: sudo xcode-select -s /Applications/Xcode_16.1.app
+    
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@main
+      with:
+        languages: ${{ matrix.language }}
+        build-mode: ${{ matrix.build-mode }}
+
+    - if: matrix.build-mode == 'manual'
+      shell: bash
+      run: |
+        xcodebuild -project Echo.xcodeproj -scheme Echo -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO | xcbeautify
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@main
+      with:
+        category: "/language:${{matrix.language}}"
