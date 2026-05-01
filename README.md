@@ -73,8 +73,8 @@ Echo requires macOS Accessibility permissions and will prompt you automatically 
 **App crashes immediately on launch**
 The `OPEN_AI` environment variable is not set. Follow the [Development Setup](#development-setup) steps above to configure it in your Xcode scheme.
 
-**Echo does not detect the frontmost window / "No editor" in the log**
-The target application must expose an `AXTextArea` element. This works in most native text editors (Xcode, TextMate, BBEdit). Browser address bars and some web text areas may not be accessible via the Accessibility API.
+**Echo does not detect the frontmost window / "No editor" message**
+The target application must expose an `AXTextArea` or `AXTextField` element. This works in most native text editors (Xcode, TextMate, BBEdit) and many text fields. Browser address bars and some web text areas may not be accessible via the Accessibility API.
 
 **Accessibility permission is denied**
 Open **System Settings > Privacy & Security > Accessibility** and verify that Echo is listed and toggled on. Re-building from Xcode may require re-granting the permission.
@@ -98,7 +98,7 @@ Verify your API key is valid and has GPT-4o access. Check your [OpenAI usage das
 - **`FrontmostApplication`**:
   Observes and detects the currently active macOS application.
 
-- **`AccessbilableApplication`**:
+- **`AccessibleApplication`**:
   Provides Accessibility API integration to fetch and update content in the frontmost application.
 
 ### View Hierarchy
