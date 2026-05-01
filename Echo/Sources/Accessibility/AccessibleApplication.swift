@@ -34,18 +34,10 @@ final class AccessbilableApplication: NSObject {
 
 final class Accessibility {
     
-    func requestAccess() {
-        // Specify a dialog alert text
+    @discardableResult
+    func requestAccess() -> Bool {
         let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
-        
-        // Ask for permission
-        let accessEnabled = AXIsProcessTrustedWithOptions(options)
-        
-        if accessEnabled == true {
-            print("access granted")
-        } else {
-            print("access denied")
-        }
+        return AXIsProcessTrustedWithOptions(options)
     }
     
     func searchItem(from element: AXUIElement, criteria: (AccessibilityItem) -> Bool) -> [AccessibilityItem] {

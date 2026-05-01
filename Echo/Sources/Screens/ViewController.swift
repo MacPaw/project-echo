@@ -71,26 +71,28 @@ private extension ViewController {
     
     func start(_ prompt: String) {
         guard let currentApplication = self.currentApplication else {
-            print("No application")
+            self.store.add(message: .textAnswer("No frontmost application detected."))
             return
         }
-        
+
         let accessbilableApplication = AccessbilableApplication(application: currentApplication)
         guard let editor = accessbilableApplication.fetchEditor() else {
-            print("No editor")
+            self.store.add(message: .textAnswer("No editable text area found in the frontmost application."))
             return
         }
-        
+
         self.store.add(message: .thinking("No problem. Updating..."))
-        self.agent.query(inputString: editor.value, prompt: prompt) { result in
+        self.agent.query(inputString: editor.value, prompt: prompt) { [weak self] result in
             switch result {
             case .success(let response):
                 editor.updateValue(response)
                 DispatchQueue.main.async {
-                    self.store.add(message: .textAnswer("Done!"))
+                    self?.store.add(message: .textAnswer("Done!"))
                 }
             case .failure(let error):
-                print(error)
+                DispatchQueue.main.async {
+                    self?.store.add(message: .textAnswer("Request failed: \(error.localizedDescription)"))
+                }
             }
         }
     }
