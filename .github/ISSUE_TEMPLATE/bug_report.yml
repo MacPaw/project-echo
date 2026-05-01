@@ -1,0 +1,75 @@
+name: Bug Report
+description: Report a problem with Echo
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill out the sections below.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the problem.
+      placeholder: When I do X, Y happens instead of Z.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Minimal steps that reliably reproduce the issue.
+      placeholder: |
+        1. Launch Echo
+        2. Open Xcode
+        3. Type prompt "..."
+        4. Click Send
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS Version
+      placeholder: "14.5"
+    validations:
+      required: true
+  - type: input
+    id: xcode-version
+    attributes:
+      label: Xcode Version
+      placeholder: "16.1"
+    validations:
+      required: true
+  - type: input
+    id: target-app
+    attributes:
+      label: Target Application (the app Echo was interacting with)
+      placeholder: "Xcode 16.1, TextMate 2.0, Safari 18.0"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console Logs
+      description: Any relevant output from Console.app or Xcode (please redact API keys).
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Pre-flight checklist
+      options:
+        - label: I have searched existing issues for duplicates.
+          required: true
+        - label: I have set the `OPEN_AI` environment variable correctly.
+          required: true
