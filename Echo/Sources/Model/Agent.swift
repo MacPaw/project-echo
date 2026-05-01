@@ -25,7 +25,7 @@ final class Agent {
     func query(inputString: String, prompt: String, reply: @escaping ((Result<String, Error>) -> Void)) {
         let input = "\(inputString)\n\n---------\n\n\(prompt)"
         openAI.chats(query: .init(messages: [
-            .assistant(.init(content: systemMessage)),
+            .system(.init(content: systemMessage)),
             .user(.init(content: .init(string: input)))
         ], model: .gpt4_o)) { result in
             switch result {

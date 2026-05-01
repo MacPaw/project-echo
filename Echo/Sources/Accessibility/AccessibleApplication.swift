@@ -9,7 +9,7 @@ import Foundation
 import Accessibility
 import ApplicationServices
 
-final class AccessbilableApplication: NSObject {
+final class AccessibleApplication: NSObject {
     
     private let accessibility = Accessibility()
     private let application: Application
@@ -18,16 +18,15 @@ final class AccessbilableApplication: NSObject {
         self.application = application
     }
     
+    private static let editableRoles: Set<String> = ["AXTextArea", "AXTextField"]
+
     func fetchEditor() -> AccessibilityItem? {
         accessibility.requestAccess()
-        
+
         let app: AXUIElement = .from(pid: application.pid)
         let items = accessibility.searchItem(from: app, criteria: {
-            if $0.role == "AXTextArea" {
-                return true//$0.isFocused
-            }
-            return false
-        }).filter { $0.value.isEmpty == false && $0.value.replacingOccurrences(of: " ", with: "").isEmpty == false }
+            Self.editableRoles.contains($0.role)
+        }).filter { !$0.value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
         return items.first
     }
 }

@@ -75,8 +75,8 @@ private extension ViewController {
             return
         }
 
-        let accessbilableApplication = AccessbilableApplication(application: currentApplication)
-        guard let editor = accessbilableApplication.fetchEditor() else {
+        let accessibleApplication = AccessibleApplication(application: currentApplication)
+        guard let editor = accessibleApplication.fetchEditor() else {
             self.store.add(message: .textAnswer("No editable text area found in the frontmost application."))
             return
         }
