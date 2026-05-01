@@ -2,6 +2,12 @@
 
 ![EchoIcon-256](https://github.com/user-attachments/assets/5ce1e09e-8413-48cb-a626-99b45dd18717)
 
+[![Build](https://github.com/MacPaw/project-echo/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/MacPaw/project-echo/actions/workflows/build.yml)
+[![CodeQL](https://github.com/MacPaw/project-echo/actions/workflows/codeql.yml/badge.svg?branch=develop)](https://github.com/MacPaw/project-echo/actions/workflows/codeql.yml)
+[![Swift 5.9+](https://img.shields.io/badge/Swift-5.9%2B-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/badge/platform-macOS%2014%2B-blue.svg)](https://www.apple.com/macos)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **Echo** is a macOS application that demonstrates how to interact with macOS applications using Accessibility and [OpenAI](https://openai.com) APIs. It allows users to send prompts to the frontmost application and receive responses, showcasing a functional chat-like interface.
 
 <img width="1800" alt="Screenshot 2024-11-18 at 2 58 45 PM" src="https://github.com/user-attachments/assets/b7d2a457-d4c6-430b-8fae-c3364ea4c7af">
