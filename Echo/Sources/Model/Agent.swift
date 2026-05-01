@@ -14,7 +14,12 @@ final class Agent {
         case emptyResult
     }
     
-    private let openAI = OpenAI(apiToken: ProcessInfo.processInfo.environment["OPEN_AI"]!)
+    private let openAI: OpenAI = {
+        guard let token = ProcessInfo.processInfo.environment["OPEN_AI"], !token.isEmpty else {
+            fatalError("OPEN_AI environment variable is not set. See README.md for setup instructions.")
+        }
+        return OpenAI(apiToken: token)
+    }()
     private let systemMessage = "You are an assistant that performs text and code operations. Return only the result, without any additional explanations. Do not add language identifiers."
     
     func query(inputString: String, prompt: String, reply: @escaping ((Result<String, Error>) -> Void)) {

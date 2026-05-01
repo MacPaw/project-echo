@@ -22,7 +22,6 @@ final class FrontmostApplication: NSObject {
             queue: .main
         ) { notification in
             if let userInfo = notification.userInfo, let app = userInfo[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
-                print("Frontmost application changed to: \(app.localizedName ?? "Unknown")")
                 onChange?(Application(runningApplication: app))
             }
         }
