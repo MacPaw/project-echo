@@ -65,3 +65,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Environment variables (never commit API keys)
+.env
+.env.local
+.env.*.local
+*.env
