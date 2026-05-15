@@ -1,6 +1,6 @@
 # Echo
 
-![EchoIcon-256](https://github.com/user-attachments/assets/5ce1e09e-8413-48cb-a626-99b45dd18717)
+![Project Echo](.github/header.png)
 
 [![Build](https://github.com/MacPaw/project-echo/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/MacPaw/project-echo/actions/workflows/build.yml)
 [![CodeQL](https://github.com/MacPaw/project-echo/actions/workflows/codeql.yml/badge.svg?branch=develop)](https://github.com/MacPaw/project-echo/actions/workflows/codeql.yml)
